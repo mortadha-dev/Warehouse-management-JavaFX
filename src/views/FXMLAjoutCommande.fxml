@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="659.0" prefWidth="746.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLAjoutCommandeController">
+   <children>
+      <TextField fx:id="descriptioncommandea" layoutX="198.0" layoutY="125.0" />
+      <TextField fx:id="quantitecommandea" layoutX="200.0" layoutY="191.0" />
+      <Label layoutX="55.0" layoutY="129.0" text="Description commande" textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="195.0" text="Quantitecommande" textFill="WHITE" />
+      <AmbientLight color="CHARTREUSE" layoutX="56.0" layoutY="55.0" lightOn="true" />
+      <TextField fx:id="libellecommandea" layoutX="198.0" layoutY="65.0" />
+      <Label layoutX="61.0" layoutY="65.0" prefHeight="25.0" prefWidth="112.0" text="libelle commande" textFill="WHITE" />
+      <ProgressIndicator fx:id="ALLO" layoutX="204.0" layoutY="431.0" prefHeight="94.0" prefWidth="150.0" />
+      <Label layoutX="96.0" layoutY="265.0" prefHeight="18.0" prefWidth="72.0" text="Date" textFill="WHITE" />
+      <JFXButton fx:id="ajoutcommande" buttonType="RAISED" layoutX="132.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajoutcommande" prefHeight="45.0" prefWidth="265.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="mah" alignment="CENTER" layoutX="140.0" layoutY="597.0" prefHeight="48.0" prefWidth="250.0" style="-fx-background-color: #FFC66C;" text="Progressing">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="746.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="retour" mnemonicParsing="false" onAction="#retour" text="Retour" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="clear" mnemonicParsing="false" onAction="#clear" text="Vider les champs" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="81.0" layoutY="387.0" prefHeight="25.0" prefWidth="88.0" text="fournisseur" textFill="WHITE" />
+      <Label layoutX="81.0" layoutY="325.0" prefHeight="25.0" prefWidth="88.0" text="Produit" textFill="WHITE" />
+      <DatePicker fx:id="datepicker" layoutX="199.0" layoutY="261.0" onAction="#selectDate" />
+      <ComboBox fx:id="groupe" layoutX="199.0" layoutY="387.0" prefWidth="150.0" />
+      <ComboBox fx:id="pro" layoutX="199.0" layoutY="325.0" prefWidth="150.0" />
+      <ImageView fx:id="cmdimg" fitHeight="291.0" fitWidth="281.0" layoutX="429.0" layoutY="58.0">
+         <image>
+            <Image url="@../images/commander-en-ligne-spiq.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="605.0" layoutY="585.0" mnemonicParsing="false" onAction="#clear" prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: #bb0b0b;" text="Vider les champs" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="1087.0" style="-fx-background-color: #2F2B43;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLHomeController">
+   <children>
+      <AnchorPane prefHeight="519.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="147.0" prefHeight="384.0" prefWidth="262.0" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="147.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#gereachat" prefHeight="66.0" prefWidth="262.0" styleClass="button1" stylesheets="@../views/let.css" text="Gestion d'achat" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding></Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#stock" prefHeight="74.0" prefWidth="262.0" styleClass="button1" stylesheets="@../views/let.css" text="Gestion de Stock" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#employes" prefHeight="69.0" prefWidth="262.0" styleClass="button1" stylesheets="@../views/let.css" text="Gestion des employés" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#livraison" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../views/let.css" text="Gestion de livraison" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#sav" prefHeight="61.0" prefWidth="262.0" styleClass="button1" stylesheets="@../views/let.css" text="Gestion de S.AV" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutY="86.0" prefHeight="61.0" prefWidth="262.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;">
+               <children>
+                  <Label layoutX="25.0" layoutY="17.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Group layoutX="19.0" layoutY="18.0">
+                     <children>
+                        <Circle fill="#6dd89f" layoutY="3.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#5fb68c" layoutX="19.0" layoutY="3.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#457666" layoutY="21.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#539778" layoutX="19.0" layoutY="21.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="#fbfcfc" layoutX="34.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion d'entrôpot">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+            <JFXButton fx:id="deconnecter" buttonType="RAISED" layoutX="30.0" layoutY="557.0" onAction="#deconnecter" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #6ED9A0;" stylesheets="@Lgoin.css" text="Se déconnecter" textFill="#fbfcfc">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Line endX="-430.0" endY="-78.81817626953125" layoutX="445.0" layoutY="614.0" startX="-430.0" startY="2.18182373046875" stroke="#465058" strokeWidth="2.0" />
+            <Line endX="-430.0" endY="-78.81817626953125" layoutX="678.0" layoutY="613.0" startX="-430.0" startY="2.18182373046875" stroke="#465058" strokeWidth="2.0" />
+            <Line endX="-248.0" endY="-39.81817626953125" layoutX="495.0" layoutY="573.0" startX="-477.0" startY="-39.81817626953125" stroke="#465058" strokeWidth="2.0" />
+         </children></AnchorPane>
+      <Pane layoutX="262.0" prefHeight="649.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-20.0" layoutY="-181.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" stylesheets="@../../../../../Desktop/let.css">
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="thumb" />
+               </styleClass></Pane>
+            <Pane layoutX="76.0" layoutY="106.0" />
+            <ImageView fx:id="img" fitHeight="193.0" fitWidth="375.0" layoutX="-52.0" layoutY="222.0">
+               <image>
+                  <Image url="@../images/commande-en-ligne_1_1_1_1_1_1_1_1_2_1_1_1_1_mini.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cmd" fitHeight="193.0" fitWidth="289.0" layoutX="537.0" layoutY="442.0">
+               <image>
+                  <Image url="@../images/assurance-entrepot-hangar.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="com" fitHeight="208.0" fitWidth="271.0" layoutX="1.0" layoutY="435.0">
+               <image>
+                  <Image url="@../images/fournisseur-delais-livraison-820x340.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="four" fitHeight="267.0" fitWidth="232.0" layoutX="287.0" layoutY="278.0">
+               <image>
+                  <Image url="@../images/checklist2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="assur" fitHeight="193.0" fitWidth="289.0" layoutX="537.0" layoutY="226.0">
+               <image>
+                  <Image url="@../images/negociation-fournisseurs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Line endX="-432.0" endY="-7.81817626953125" layoutX="455.0" layoutY="624.0" startX="-206.0" startY="-7.81817626953125" stroke="#465058" strokeWidth="2.0" />
+   </children>
+</AnchorPane>

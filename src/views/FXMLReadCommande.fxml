@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="625.0" prefWidth="1154.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLReadCommandeController">
+   <children>
+      <TableView fx:id="tableUser" layoutY="133.0" onMouseClicked="#getselected" prefHeight="195.0" prefWidth="762.0">
+         <columns>
+            <TableColumn fx:id="columnlibelle" prefWidth="105.0" text="Libelle commande" />
+            <TableColumn fx:id="columndescription" prefWidth="139.0" text="Description Commande" />
+            <TableColumn fx:id="columnquantite" prefWidth="130.0" text="Quantite Commande" />
+            <TableColumn fx:id="columnprixunitaire" minWidth="0.0" prefWidth="75.0" text="prixUnitaire" />
+            <TableColumn fx:id="columnprixtotal" prefWidth="73.0" text="prixTotal" />
+            <TableColumn fx:id="columndate" prefWidth="73.0" text="date" />
+            <TableColumn fx:id="columnetat" minWidth="0.0" prefWidth="55.0" text="etat" />
+            <TableColumn fx:id="columnnomfournisseur" prefWidth="121.0" text="Nom fournisseur" />
+         </columns>
+      </TableView>
+      <Label layoutX="165.0" layoutY="29.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="    Liste des Commandes">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="505.0" layoutY="394.0" prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="505.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#delete" prefHeight="45.0" prefWidth="237.0" ripplerFill="#322e2e" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Supprimer une commande" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ajoutcommande" buttonType="RAISED" layoutX="258.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajoutcommande" prefHeight="45.0" prefWidth="220.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter une commande" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1175.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextField fx:id="descriptioncommandea" layoutX="844.0" layoutY="108.0" />
+      <TextField fx:id="quantitecommandea" layoutX="844.0" layoutY="162.0" />
+      <TextField fx:id="prixUnitairea" layoutX="844.0" layoutY="212.0" />
+      <TextField fx:id="datea" layoutX="844.0" layoutY="316.0" />
+      <TextField fx:id="prixTotala" layoutX="844.0" layoutY="260.0" />
+      <TextField fx:id="libellecommandea" layoutX="844.0" layoutY="59.0" />
+      <TextField fx:id="etata" layoutX="844.0" layoutY="366.0" />
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="800.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#update" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Modifier une commande" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="774.0" layoutY="216.0" text="Prix Unitaire" textFill="WHITE" />
+      <Label layoutX="800.0" layoutY="63.0" text="Libelle" textFill="WHITE" />
+      <Label layoutX="785.0" layoutY="166.0" text="Quantite" textFill="WHITE" />
+      <Label layoutX="782.0" layoutY="264.0" text="Prix Total" textFill="WHITE" />
+      <Label layoutX="796.0" layoutY="320.0" text="Date" textFill="WHITE" />
+      <Label layoutX="796.0" layoutY="370.0" text="etat" textFill="WHITE" />
+      <Label layoutX="778.0" layoutY="112.0" text="Description" textFill="WHITE" />
+      <JFXButton fx:id="ajoutcommande1" buttonType="RAISED" layoutX="291.0" layoutY="449.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#PDF" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Génerer un PDF" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="affichercommande" buttonType="RAISED" layoutX="14.0" layoutY="356.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#affichercommande" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Afficher les commandes" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Line endX="-390.0" endY="-498.0" layoutX="1164.0" layoutY="534.0" startX="-390.0" startY="-115.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="20.0" endY="2.0" layoutX="1036.0" layoutY="415.0" startX="-272.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="-390.0" endY="-510.0" layoutX="1445.0" layoutY="546.0" startX="-390.0" startY="-128.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="81.0" endY="1.9999923706054688" layoutX="972.0" layoutY="32.0" startX="-210.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />      
+   </children>
+</AnchorPane>

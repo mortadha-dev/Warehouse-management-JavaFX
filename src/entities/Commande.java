@@ -8,8 +8,7 @@ package entities;
  *
  * @author admin
  */
-public class Commande {
-    int fournisseur_id;
+public class Commande { 
     int produit_id;
     int id ;
     String libellecommande ;
@@ -19,10 +18,30 @@ public class Commande {
     float prixtotal;
     String date;
     String etat ;
+    String nomfournisseur ;
+    Produit id_produit;
+    Fournisseur id_fournisseur ;
+    
+    
     
     public Commande(){
         
     }
+    
+//     public Commande(String libellecommande){
+//         this.libellecommande = libellecommande;
+//        
+//    }
+      public Commande(String etat){
+         this.etat = etat;
+        
+    }
+      
+      public Commande(float prixunitaire, float prixtotal) {
+        ;
+        this.prixunitaire = prixunitaire;
+        this.prixtotal = prixtotal;
+      }
      public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, String etat) {
         this.libellecommande = libellecommande;
         this.descriptioncommande = descriptioncommande;
@@ -32,8 +51,18 @@ public class Commande {
         this.date = date;   
         this.etat = etat;
     }
+        public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date) {
+        this.libellecommande = libellecommande;
+        this.descriptioncommande = descriptioncommande;
+        this.quantitecommande = quantitecommande;
+        this.prixunitaire = prixunitaire;
+        this.prixtotal = prixtotal;
+        this.date = date;   
 
-    public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, String etat, int fournisseur_id, int produit_id) {
+    }
+      
+
+    public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, String etat,String nomfournisseur, int fournisseur_id, int produit_id) {
         this.libellecommande = libellecommande;
         this.descriptioncommande = descriptioncommande;
         this.quantitecommande = quantitecommande;
@@ -41,11 +70,22 @@ public class Commande {
         this.prixtotal = prixtotal;
         this.date = date;   
         this.etat = etat;
+        this.nomfournisseur= nomfournisseur;
         this.fournisseur_id= fournisseur_id;
         this.produit_id=produit_id;
     }
-    
-     public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date) {
+    public Commande(String libellecommande, String descriptioncommande, int quantitecommande,String date,int fournisseur_id, int produit_id) {
+        this.libellecommande = libellecommande;
+        this.descriptioncommande = descriptioncommande;
+        this.quantitecommande = quantitecommande;
+        this.date = date;   
+      
+        this.fournisseur_id= fournisseur_id;
+        this.produit_id=produit_id;
+    }
+     int fournisseur_id;
+
+     public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, int fournisseur_id, int produit_id) {
         this.libellecommande = libellecommande;
         this.descriptioncommande = descriptioncommande;
         this.quantitecommande = quantitecommande;
@@ -133,6 +173,31 @@ public class Commande {
     public void setProduit_id(int produit_id) {
         this.produit_id = produit_id;
     }
+
+    public String getNomfournisseur() {
+        return nomfournisseur;
+    }
+
+    public void setNomfournisseur(String nomfournisseur) {
+        this.nomfournisseur = nomfournisseur;
+    }
+
+    public Produit getId_produit() {
+        return id_produit;
+    }
+
+    public void setId_produit(Produit id_produit) {
+        this.id_produit = id_produit;
+    }
+
+    public Fournisseur getId_fournisseur() {
+        return id_fournisseur;
+    }
+
+    public void setId_fournisseur(Fournisseur id_fournisseur) {
+        this.id_fournisseur = id_fournisseur;
+    }
+    
     
     
     

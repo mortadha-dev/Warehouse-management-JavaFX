@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="649.0" prefWidth="1087.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLApropsController">
+   <children>
+      <TextArea fx:id="texte" layoutX="268.0" layoutY="151.0" prefHeight="410.0" prefWidth="551.0" text="&#10;&#10;&#10;+Système de stockage dynamique avec plus de 5.000 locations pour une traçabilité parfaite &#10;&#10;&#10;&#10;+4000m² surface de stockage &#10;&#10;&#10;&#10;+L'optimisation et l'exécution des flux de travail en temps réel&#10;&#10;&#10;&#10;+Contrôle via Code à barres&#10;&#10;&#10;&#10;+Une vision Globale et une optimisation en temps réel de tous les opérations" />
+      <MenuBar layoutX="-1.0" layoutY="-1.0" prefHeight="25.0" prefWidth="1087.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

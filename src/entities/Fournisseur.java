@@ -10,6 +10,8 @@ package entities;
  * @author admin
  */
 public class Fournisseur {
+    String etat_compte;
+    int user_id;
     int id ;
     int code; 
     String nom;
@@ -23,7 +25,18 @@ public class Fournisseur {
     public Fournisseur (){
         
     }
+    public Fournisseur(String nom){
+        
+    }
 
+//    public Fournisseur(int id ){
+//        
+//    }
+    
+    public Fournisseur(int user_id ){
+        this.user_id= user_id;
+        
+    }
     public Fournisseur( int code, String nom, String prenom, String adresse_email, int telephone, String ville, String pays,String rapidite) {
        
         this.code = code;
@@ -45,6 +58,41 @@ public class Fournisseur {
         this.ville = ville;
         this.pays = pays;
         this.rapidite=rapidite;
+    }
+           public Fournisseur( int id , int code, String nom, String prenom, String adresse_email, int telephone, String ville, String pays,String rapidite, int user_id) {
+        this.id=id;
+        this.code = code;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse_email = adresse_email;
+        this.telephone = telephone;
+        this.ville = ville;
+        this.pays = pays;
+        this.rapidite=rapidite;
+        this.user_id=user_id;
+    }
+       public Fournisseur(int code, String nom, String prenom, String adresse_email, int telephone, String ville, String pays,String rapidite, int user_id) {
+        this.code = code;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse_email = adresse_email;
+        this.telephone = telephone;
+        this.ville = ville;
+        this.pays = pays;
+        this.rapidite=rapidite;
+        this.user_id=user_id;
+    }
+              public Fournisseur(int id , int code, String nom, String prenom, String adresse_email, int telephone, String ville, String pays,String rapidite,String etat_compte) {
+        this.id=id;
+                  this.code = code;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse_email = adresse_email;
+        this.telephone = telephone;
+        this.ville = ville;
+        this.pays = pays;
+        this.rapidite=rapidite;
+        this.etat_compte=etat_compte;
     }
 
 
@@ -119,6 +167,25 @@ public class Fournisseur {
     public void setRapidite(String rapidite) {
         this.rapidite = rapidite;
     }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getEtat_compte() {
+        return etat_compte;
+    }
+
+    public void setEtat_compte(String etat_compte) {
+        this.etat_compte = etat_compte;
+    }
+    
+    
+    
     @Override
     public String toString() {
         return "Fournisseur{" + "id=" + id + ", code=" + code + ", nom=" + nom + ", prenom=" + prenom + ", adresse_email=" + adresse_email + ", telephone=" + telephone + ", ville=" + ville + ", pays=" + pays + ", rapidite=" + rapidite + '}';
