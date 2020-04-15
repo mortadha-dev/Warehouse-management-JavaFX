@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author admin
  */
-public class Main extends Application { 
+public class Main extends Application {
     public void start(Stage stage) throws Exception {   
         
     Parent root = FXMLLoader.load(getClass().getResource("/views/Login.fxml"));
