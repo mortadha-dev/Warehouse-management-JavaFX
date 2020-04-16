@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #131022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AjoutproduitController">
+   <children>
+       <Pane fx:id="hayh" layoutX="-57.0" layoutY="-193.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+      
+            <Label layoutX="137.0" layoutY="61.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="142.0" layoutY="128.0" text="Libelle" textFill="WHITE" />
+      <Label layoutX="142.0" layoutY="194.0" text="Quantite" textFill="WHITE" />
+      <Label layoutX="145.0" layoutY="259.0" text="Quantite minimum" textFill="WHITE" />
+      <TextField fx:id="descriptionp" layoutX="300.0" layoutY="58.0" />
+      <TextField fx:id="libellep" layoutX="300.0" layoutY="124.0" />
+      <TextField fx:id="quantitep" layoutX="300.0" layoutY="190.0" />
+      <TextField fx:id="quantiteminp" layoutX="300.0" layoutY="255.0" />
+      <Button fx:id="Ajouter" layoutX="240.0" layoutY="325.0" mnemonicParsing="false" onAction="#Ajout" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Ajouter produit" textFill="#a868a0" />
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="20.0" prefWidth="135.0" text="Ajouter un produit:" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

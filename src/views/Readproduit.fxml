@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="935.0" style="-fx-background-color: #393351; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReadproduitController">
+   <children>
+      
+      <TableView fx:id="tabproduit" layoutX="171.0" layoutY="83.0" onMouseClicked="#click" prefHeight="200.0" prefWidth="584.0">
+        <columns>
+          <TableColumn fx:id="columnid" prefWidth="47.0" text="Id" />
+          <TableColumn fx:id="columndesc" prefWidth="177.0" text="Description" />
+            <TableColumn fx:id="columnlibell" prefWidth="120.0" text="Libelle" />
+            <TableColumn fx:id="columnq" prefWidth="122.0" text="Quantite" />
+            <TableColumn fx:id="columnqm" prefWidth="117.0" text="Quantite minimum" />
+        </columns>
+      </TableView>
+      <Label layoutX="374.0" layoutY="39.0" text="Liste des produits" textFill="#090343">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="descriptionp" layoutX="314.0" layoutY="344.0" />
+      <TextField fx:id="libellep" layoutX="660.0" layoutY="341.0" />
+      <TextField fx:id="quantitep" layoutX="314.0" layoutY="418.0" />
+      <TextField fx:id="qmp" layoutX="660.0" layoutY="418.0" />
+      <Label layoutX="187.0" layoutY="344.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="524.0" layoutY="347.0" text="Libelle" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="195.0" layoutY="421.0" text="Quantite" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="524.0" layoutY="421.0" text="Quantite minimum" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Button fx:id="modifier" layoutX="490.0" layoutY="496.0" mnemonicParsing="false" onAction="#modif" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Modifier produit" textFill="#a868a0" />
+      <Button fx:id="supprimer" layoutX="677.0" layoutY="496.0" mnemonicParsing="false" onAction="#supp" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Supprimer produit" textFill="#a868a0" />
+      <Button fx:id="refresh" layoutX="307.0" layoutY="496.0" mnemonicParsing="false" onAction="#refresher" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Refresher le tableau" textFill="#a868a0" />
+      <Button fx:id="ajouter" layoutX="171.0" layoutY="496.0" mnemonicParsing="false" onAction="#ajout" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Ajouter produit" textFill="#a868a0" />
+      <Button fx:id="exporter" layoutX="591.0" layoutY="283.0" mnemonicParsing="false" onAction="#export" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="exporter les données en excel" textFill="#a868a0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #131022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InterfaceAjoutController">
+   <children>
+       <Pane fx:id="hayh" layoutX="-34.0" layoutY="-194.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+      
+      <Label layoutX="112.0" layoutY="69.0" prefHeight="19.0" prefWidth="95.0" text="Nom court lieu" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="109.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="145.0" text="Adress" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="184.0" text="Code postale" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="226.0" text="Ville" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="265.0" text="Pays" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="302.0" text="Stock physique" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="nom" layoutX="248.0" layoutY="69.0" />
+      <TextField fx:id="desc" layoutX="248.0" layoutY="105.0" />
+      <TextField fx:id="adresst" layoutX="248.0" layoutY="141.0" />
+      <TextField fx:id="codepostalet" layoutX="248.0" layoutY="180.0" />
+      <TextField fx:id="villet" layoutX="248.0" layoutY="222.0" />
+      <TextField fx:id="payst" layoutX="248.0" layoutY="261.0" />
+      <TextField fx:id="stock" layoutX="248.0" layoutY="298.0" />
+      <Button fx:id="ajouter" layoutX="233.0" layoutY="344.0" mnemonicParsing="false" onAction="#ajout" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Ajouter entrepot" textFill="#a868a0" />
+      <Label layoutX="42.0" layoutY="28.0" text="Ajouter un entrepot" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
