@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.AmbientLight?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -22,7 +22,7 @@
       <TextField fx:id="descriptioncommandea" layoutX="198.0" layoutY="125.0" />
       <TextField fx:id="quantitecommandea" layoutX="200.0" layoutY="191.0" />
       <Label layoutX="55.0" layoutY="129.0" text="Description commande" textFill="WHITE" />
-      <Label layoutX="64.0" layoutY="195.0" text="Quantitecommande" textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="195.0" text="Quantite  demandé" textFill="WHITE" />
       <AmbientLight color="CHARTREUSE" layoutX="56.0" layoutY="55.0" lightOn="true" />
       <TextField fx:id="libellecommandea" layoutX="198.0" layoutY="65.0" />
       <Label layoutX="61.0" layoutY="65.0" prefHeight="25.0" prefWidth="112.0" text="libelle commande" textFill="WHITE" />
@@ -62,7 +62,6 @@
       </MenuBar>
       <Label layoutX="81.0" layoutY="387.0" prefHeight="25.0" prefWidth="88.0" text="fournisseur" textFill="WHITE" />
       <Label layoutX="81.0" layoutY="325.0" prefHeight="25.0" prefWidth="88.0" text="Produit" textFill="WHITE" />
-      <DatePicker fx:id="datepicker" layoutX="199.0" layoutY="261.0" onAction="#selectDate" />
       <ComboBox fx:id="groupe" layoutX="199.0" layoutY="387.0" prefWidth="150.0" />
       <ComboBox fx:id="pro" layoutX="199.0" layoutY="325.0" prefWidth="150.0" />
       <ImageView fx:id="cmdimg" fitHeight="291.0" fitWidth="281.0" layoutX="429.0" layoutY="58.0">
@@ -71,5 +70,6 @@
          </image>
       </ImageView>
       <Button layoutX="605.0" layoutY="585.0" mnemonicParsing="false" onAction="#clear" prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: #bb0b0b;" text="Vider les champs" textFill="WHITE" />
+      <JFXDatePicker fx:id="datepicker" defaultColor="#008f8d" layoutX="200.0" layoutY="259.0" onAction="#selectDate" prefHeight="25.0" prefWidth="185.0" style="-fx-background-color: #ffffff;" />
    </children>
 </AnchorPane>

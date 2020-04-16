@@ -51,7 +51,6 @@ public class CommandeService implements IService.IServiceCommande{
     public List<Commande> afficherCommande() throws SQLException {
           
         List<Commande> liste = new  ArrayList<>();
-        
             try {
                  String req = "SELECT * FROM Commande";
                  ste = con.createStatement();
@@ -62,9 +61,9 @@ public class CommandeService implements IService.IServiceCommande{
                  c.setLibellecommande(res.getString(2));
                  c.setDescriptioncommande(res.getString(3));
                  c.setQuantitecommande(res.getInt(4));
-                 c.setPrixunitaire(res.getInt(5));
-                 c.setPrixtotal(res.getInt(6));
-                 c.setDate(res.getString(7));
+                 c.setDate(res.getString(5));
+                 c.setPrixunitaire(res.getInt(6));
+                 c.setPrixtotal(res.getInt(7));              
                  c.setEtat(res.getString(8));
                  c.setNomfournisseur(res.getString(9));
                  
@@ -100,9 +99,9 @@ public class CommandeService implements IService.IServiceCommande{
     }
     
     @Override
-    public void deleteCommande(int quantitecommande) throws SQLException {
+    public void deleteCommande(int id) throws SQLException {
            try {
-            String requete = " DELETE FROM Commande WHERE quantitecommande='"+quantitecommande+"'" ;
+            String requete = " DELETE FROM Commande WHERE id='"+id+"'" ;
             pst = con.prepareStatement(requete);
              ste=con.createStatement();
             ste.executeUpdate(requete);
@@ -174,9 +173,9 @@ public class CommandeService implements IService.IServiceCommande{
                  c.setLibellecommande(res.getString(2));
                  c.setDescriptioncommande(res.getString(3));
                  c.setQuantitecommande(res.getInt(4));
-                 c.setPrixunitaire(res.getInt(5));
-                 c.setPrixtotal(res.getInt(6));
-                 c.setDate(res.getString(7));
+                  c.setDate(res.getString(5));
+                 c.setPrixunitaire(res.getInt(6));
+                 c.setPrixtotal(res.getInt(7));       
                  c.setEtat(res.getString(8));
                  liste.add(c);                           
                  }       

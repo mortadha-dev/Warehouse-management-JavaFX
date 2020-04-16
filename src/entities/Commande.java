@@ -22,8 +22,6 @@ public class Commande {
     Produit id_produit;
     Fournisseur id_fournisseur ;
     
-    
-    
     public Commande(){
         
     }
@@ -207,25 +205,7 @@ public class Commande {
     public String toString() {
         return "Commande{" + "id=" + id + ", libellecommande=" + libellecommande + ", descriptioncommande=" + descriptioncommande + ", quantitecommande=" + quantitecommande + ", prixunitaire=" + prixunitaire + ", prixtotal=" + prixtotal + ", date=" + date + ", etat=" + etat + '}';
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            
+
            
     
 }

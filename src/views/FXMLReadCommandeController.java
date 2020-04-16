@@ -126,11 +126,19 @@ public class FXMLReadCommandeController implements Initializable {
     private void affichercommande(ActionEvent event) throws SQLException {
         CommandeService f =new CommandeService();
         List<Commande> list = f.afficherCommande();  
+        
         columnlibelle.setCellValueFactory(new PropertyValueFactory<>("libellecommande"));
+        
         columndescription.setCellValueFactory(new PropertyValueFactory<>("descriptioncommande"));
+        
         columnquantite.setCellValueFactory(new PropertyValueFactory<>("quantitecommande"));
-        columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));
+        
         columnprixunitaire.setCellValueFactory(new PropertyValueFactory<>("prixunitaire"));
+        
+        columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));
+        
+        
+        
         columndate.setCellValueFactory(new PropertyValueFactory<>("date"));
         columnetat.setCellValueFactory(new PropertyValueFactory<>("etat"));
         columnnomfournisseur.setCellValueFactory(new PropertyValueFactory<>("nomfournisseur"));    
@@ -151,7 +159,7 @@ public class FXMLReadCommandeController implements Initializable {
     @FXML
     public void delete(ActionEvent event) throws SQLException{
         CommandeService a =new CommandeService();
-        int f = (int) tableUser.getSelectionModel().getSelectedItem().getQuantitecommande();
+        int f = (int) tableUser.getSelectionModel().getSelectedItem().getId();
         System.out.println("le code de commande " +f);
         a.deleteCommande(f);         
         Alert alert  =new Alert(Alert.AlertType.INFORMATION);
@@ -244,8 +252,8 @@ public class FXMLReadCommandeController implements Initializable {
              PdfWriter.getInstance(doc, new FileOutputStream("C:\\test\\test.pdf"));         
              doc.open();             
              doc.newPage();
-              Paragraph test = new Paragraph("Liste des commandes");
-              test.setAlignment(Element.ALIGN_CENTER);
+             Paragraph test = new Paragraph("Liste des commandes");
+             test.setAlignment(Element.ALIGN_CENTER);
               
               doc.add(test);
               
