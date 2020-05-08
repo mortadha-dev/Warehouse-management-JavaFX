@@ -7,6 +7,10 @@ package views;
 import entities.Commande;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -82,15 +86,25 @@ public class FXMLAjoutCommandeController {
     
     @FXML   
     public void ajoutcommande (ActionEvent event) throws SQLException, IOException{
+//         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+//        Date datev = new Date();
+//        String d = dateFormat.format(datev);
+//        String d1 =datepicker.getValue().toString();
         if(!libellecommandea.getText().equals("")){
         if(!descriptioncommandea.getText().equals("")){
         if(!quantitecommandea.getText().equals("")){ 
+  
+        
         String libellecommande=libellecommandea.getText();
         String descriptioncommande=descriptioncommandea.getText();
         int quantitecommande=Integer.parseInt(quantitecommandea.getText());
         float prixunitaire= 0 ;
         int prixtotal= 0;  
         String date=datepicker.getValue().toString(); 
+//                                  
+//       
+//       
+//        LocalDate date = datepicker.getValue();
         String etat="";
         FournisseurService tes = new FournisseurService();
         String nomfournisseur =groupe.getValue().toString() ;
@@ -134,6 +148,7 @@ public class FXMLAjoutCommandeController {
                   alertError.setHeaderText("La libellé de la commande ne doit pas etre null");
                   alertError.showAndWait();
                }
+        
         
     }
              

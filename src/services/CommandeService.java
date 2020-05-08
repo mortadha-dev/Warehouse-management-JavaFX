@@ -37,7 +37,7 @@ public class CommandeService implements IService.IServiceCommande{
     public void ajouterCommande(Commande c) throws SQLException {
        
         try {
-            String requeteInsert = "INSERT INTO Commande ( `libellecommande` , `descriptioncommande`, `quantitecommande`, `prixUnitaire`, `prixTotal`, `date`, `etat`,`nomfournisseur`,`fournisseur_id`,`produit_id` ) VALUES ('"+c.getLibellecommande()+"', '"+c.getDescriptioncommande()+"' , '"+c.getQuantitecommande()+"' , '"+0+"' , '"+0+"','"+c.getDate()+"' ,'"+"en attente"+"' ,'"+c.getNomfournisseur()+"' ,'"+c.getFournisseur_id()+"' ,'"+c.getProduit_id()+"')";
+            String requeteInsert = "INSERT INTO Commande ( `libellecommande` , `descriptioncommande`, `quantitecommande`, `prixUnitaire`, `prixTotal`, `date`, `etat`,`nomfournisseur`,`fournisseur_id`,`produit_id` ,`commentaire` ) VALUES ('"+c.getLibellecommande()+"', '"+c.getDescriptioncommande()+"' , '"+c.getQuantitecommande()+"' , '"+0+"' , '"+0+"','"+c.getDate()+"' ,'"+"en attente"+"' ,'"+c.getNomfournisseur()+"' ,'"+c.getFournisseur_id()+"' ,'"+c.getProduit_id()+"' ,'"+""+"')";
             ste = con.createStatement();
             ste.executeUpdate(requeteInsert);    
             
