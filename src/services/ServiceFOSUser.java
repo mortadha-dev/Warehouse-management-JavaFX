@@ -201,14 +201,6 @@ public class ServiceFOSUser {
     }
       
       
-      
-      
-      
-      
-      
-      
-      
-      
        public void activercompte(int id) 
     {  
                 try {

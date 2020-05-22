@@ -15,6 +15,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import entities.Commande;
+import entities.Offre;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,6 +47,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import services.CommandeService;
+import services.OffreService;
 import utils.MyConnection;
 
 /**
@@ -56,6 +58,9 @@ import utils.MyConnection;
 public class FXMLReadCommandeController implements Initializable {
     @FXML
     public Button affichercommande;
+    
+    @FXML
+    public Button consulteroffres ; 
     
     @FXML
     public Button update;
@@ -135,16 +140,27 @@ public class FXMLReadCommandeController implements Initializable {
         
         columnprixunitaire.setCellValueFactory(new PropertyValueFactory<>("prixunitaire"));
         
-        columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));
-        
-        
-        
+        columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));      
         columndate.setCellValueFactory(new PropertyValueFactory<>("date"));
         columnetat.setCellValueFactory(new PropertyValueFactory<>("etat"));
         columnnomfournisseur.setCellValueFactory(new PropertyValueFactory<>("nomfournisseur"));    
         tableUser.setItems(null);
         tableUser.setItems((FXCollections.observableArrayList(list))); 
     }
+    
+      @FXML
+    private void afficheroffres(ActionEvent event) throws SQLException, IOException {
+        
+        Stage stage =new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLReadOffre.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show(); 
+    }
+    
+ 
+       
+    
     @FXML
     public void ajoutcommande(ActionEvent event) throws SQLException, IOException{
         System.out.println("hello");

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" prefHeight="448.0" prefWidth="994.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLReadOffre">
+   <children>
+      <TableView fx:id="tableOffre" layoutX="103.0" layoutY="169.0" prefHeight="195.0" prefWidth="762.0">
+         <columns>
+            <TableColumn fx:id="columnCodeOffre" prefWidth="118.99998474121094" text="Code de l'offre" />
+            <TableColumn fx:id="columnNomProduit" prefWidth="135.0" text="Nom du Produit" />
+            <TableColumn fx:id="columnAncienPrix" prefWidth="124.0" text="Ancien Prix" />
+            <TableColumn fx:id="columnNouveauPrix" minWidth="0.0" prefWidth="111.0" text="Nouveau Prix" />
+            <TableColumn fx:id="columnreduction" prefWidth="146.0" text="Reduction en %" />
+            <TableColumn fx:id="columndelaivalidite" prefWidth="126.0" text="Délai Validité" />
+         </columns>
+      </TableView>
+      <Label layoutX="282.0" layoutY="38.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="         Liste des Offres">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+    <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1175.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <JFXButton fx:id="ajoutcommande1" buttonType="RAISED" layoutX="401.0" layoutY="389.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afficheroffres" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Afficher les offres" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

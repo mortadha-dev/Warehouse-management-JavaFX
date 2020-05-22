@@ -110,6 +110,14 @@
       <Line endX="-390.0" endY="-498.0" layoutX="1164.0" layoutY="534.0" startX="-390.0" startY="-115.0" stroke="#465058" strokeWidth="2.0" />
       <Line endX="20.0" endY="2.0" layoutX="1036.0" layoutY="415.0" startX="-272.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
       <Line endX="-390.0" endY="-510.0" layoutX="1445.0" layoutY="546.0" startX="-390.0" startY="-128.0" stroke="#465058" strokeWidth="2.0" />
-      <Line endX="81.0" endY="1.9999923706054688" layoutX="972.0" layoutY="32.0" startX="-210.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />      
+      <Line endX="81.0" endY="1.9999923706054688" layoutX="972.0" layoutY="32.0" startX="-210.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
+      <JFXButton fx:id="afficheroffres" buttonType="RAISED" layoutX="177.0" layoutY="544.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afficheroffres" prefHeight="63.0" prefWidth="440.0" ripplerFill="WHITE" style="-fx-background-color: #34C924; -fx-background-radius: 0px;" text="Consulter La Liste des Offres de promotion" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>      
    </children>
 </AnchorPane>

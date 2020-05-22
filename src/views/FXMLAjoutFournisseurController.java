@@ -104,13 +104,13 @@ public class FXMLAjoutFournisseurController{
         String rapidite = comboBox.getValue().toString();
         //FOSUser gg = new FOSUser();
         ServiceFOSUser sf = new ServiceFOSUser();
-        FOSUser omar = new FOSUser();
+        //FOSUser test = new FOSUser();
         Fournisseur a =new Fournisseur(code,nom,prenom,adresse_email,telephone,ville,pays,rapidite);   
         FournisseurService p = new FournisseurService();
         ALLO.setVisible(true);
         mah.setVisible(true);
-        FOSUser u = new FOSUser(a.getId(), noma.getText(), prenoma.getText(), maila.getText(),
-        telephonea.getText(), (byte)1, null, enc.encryptPassword(villea.getText()), null, null, null, "a:0:{fournisseur}");
+        FOSUser u = new FOSUser(a.getId(), noma.getText(), noma.getText(), maila.getText(),
+        maila.getText(), (byte)1, null, enc.encryptPassword(villea.getText()), null, null, null, "a:1:{i:0;s:16:\"ROLE_FOURNISSEUR\";}");   
         sf.ajouterUser(u);
         a.setUser_id(sf.getUserByUsername(u.getUsername()).getId());
         p.ajouterFournisseur(a);

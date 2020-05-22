@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 /**
  *
- * @author admin
+ * @author admin    
  */
 public class Main extends Application {
     public void start(Stage stage) throws Exception {   

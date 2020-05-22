@@ -203,8 +203,8 @@ public class FXMLReadFournisseurController implements Initializable {
     @FXML
     public void delete(ActionEvent event) throws SQLException{
         FournisseurService a =new FournisseurService();
-        int f = tableUser.getSelectionModel().getSelectedItem().getCode();
-        System.out.println("le code de fournisseur " +f);
+        int f = tableUser.getSelectionModel().getSelectedItem().getId();
+        System.out.println("l'id du fournisseur est " +f);
         a.deleteFournisseur(f);        
         Alert alert  =new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("suppression du fournisseur ");
@@ -288,12 +288,15 @@ public class FXMLReadFournisseurController implements Initializable {
              @FXML
        public void desactiver(ActionEvent event) throws SQLException{
            int u_id = tableUser.getSelectionModel().getSelectedItem().getUser_id();
-           FOSUser h =new FOSUser(u_id);  
+          // FOSUser h =new FOSUser(u_id);  
            ServiceFOSUser sf = new ServiceFOSUser();
            sf.desactivercompte(u_id); 
+                 System.out.println("yakahww aaaad");
+           
            FournisseurService tt = new FournisseurService();
            Fournisseur pp = new Fournisseur();
            int id = tableUser.getSelectionModel().getSelectedItem().getId();
+           System.out.println("ababababababa");
            tt.disablecomptefournisseur(id);
            FournisseurService f =new FournisseurService();
            List<Fournisseur> list = f.afficherFournisseur();
@@ -309,15 +312,15 @@ public class FXMLReadFournisseurController implements Initializable {
           @FXML
        public void activer(ActionEvent event) throws SQLException{
            int u_id = tableUser.getSelectionModel().getSelectedItem().getUser_id();           
-           FOSUser h =new FOSUser(u_id);
+           //FOSUser o  =new FOSUser(u_id);
             ServiceFOSUser sf = new ServiceFOSUser();
            sf.activercompte(u_id);  
            FournisseurService tt = new FournisseurService();
            Fournisseur pp = new Fournisseur();
            int id = tableUser.getSelectionModel().getSelectedItem().getId();
            tt.enablecomptefournisseur(id);
-           FournisseurService f =new FournisseurService();
-           List<Fournisseur> list = f.afficherFournisseur();
+           FournisseurService b =new FournisseurService();
+           List<Fournisseur> list = b.afficherFournisseur();
            tableUser.setItems((FXCollections.observableArrayList(list))); 
            Alert alert  =new Alert(Alert.AlertType.INFORMATION);
            alert.setTitle("activation du fournisseur ");

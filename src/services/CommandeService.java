@@ -32,7 +32,6 @@ public class CommandeService implements IService.IServiceCommande{
     public CommandeService(){
         con = MyConnection.getInstance().getCnx();
     }
-
     @Override
     public void ajouterCommande(Commande c) throws SQLException {
        
@@ -157,7 +156,6 @@ public class CommandeService implements IService.IServiceCommande{
                System.out.println("La commande est modifié");
    
     }
-
     public List<Commande> afficherlacommandeenattente() throws SQLException {
           
         List<Commande> liste = new  ArrayList<>();

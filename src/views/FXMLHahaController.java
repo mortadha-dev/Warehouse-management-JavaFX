@@ -40,7 +40,8 @@ public class FXMLHahaController {
     public Button Ajouterlesprix ;
     @FXML
     public Button refuserlacommande ;
-    
+     @FXML
+    public Button show ;
     @FXML
     public TextField etata;
     @FXML 
@@ -73,8 +74,8 @@ public class FXMLHahaController {
     @FXML
     public TextField quantita ; 
     
-    @FXML
-    public Label merci ;
+   // @FXML
+   // public Label merci ;
     
     @FXML
     public ImageView bienvnue ; 
@@ -82,7 +83,7 @@ public class FXMLHahaController {
     ImageView h = new ImageView("/images/imagef.jpg");
               
     public void initialize() throws SQLException {
-        merci.setText("");
+      //  merci.setText("");
         Ajouterlesprix.setDisable(true);
         accepterlacommande.setDisable(true); 
         refuserlacommande.setDisable(true);   
@@ -92,7 +93,7 @@ public class FXMLHahaController {
     }
     
      @FXML
-    private void show(ActionEvent event) throws SQLException {
+    private void showcommandes(ActionEvent event) throws SQLException {
         CommandeService f =new CommandeService();
         List<Commande> list = f.afficherlacommandeenattente();
         columnlibelle.setCellValueFactory(new PropertyValueFactory<>("libellecommande"));
@@ -105,8 +106,7 @@ public class FXMLHahaController {
         tableUser.setItems(null);
         tableUser.setItems((FXCollections.observableArrayList(list))); 
         Ajouterlesprix.setDisable(false);
-      
-        
+              
     }
     
      public Commande x ;
@@ -126,7 +126,7 @@ public class FXMLHahaController {
         tableUser.setItems((FXCollections.observableArrayList(list))); 
         accepterlacommande.setDisable(true);
         refuserlacommande.setDisable(true);
-        merci.setText("Merci ! ");
+
      
     }   
     @FXML
@@ -194,6 +194,13 @@ public class FXMLHahaController {
 
     
                 }
+       public void retour(ActionEvent event) throws SQLException, IOException{ 
+     
+         
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("FXMLHomeFournisseur.fxml"));
+        rootPane.getChildren().setAll(pane);
+     
+      }
      
      
  }
