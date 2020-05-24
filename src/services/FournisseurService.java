@@ -39,7 +39,7 @@ public class FournisseurService implements IServiceFournisseur{
     @Override
     public void ajouterFournisseur(Fournisseur f) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO Fournisseur (`code`, `nom`, `prenom`, `adresse_email`, `telephone`, `ville`, `pays`, `rapidite`,`etat_compte`, `user_id` ) VALUES ('"+ f.getCode()+"', '" +f.getNom()+"', '" +f.getPrenom()  +"', '" + f.getAdresse_email()+ "', '" + f.getTelephone()+ "', '" + f.getVille() + "', '" + f.getPays()+ "', '" +f.getRapidite() +"', '"+ "" + "', '" +f.getUser_id()+ "')" ;
+        String requeteInsert = "INSERT INTO Fournisseur (`code`, `nom`, `prenom`, `adresse_email`, `telephone`, `ville`, `pays`, `rapidite`,`etat_compte`, `user_id` ) VALUES ('"+ f.getCode()+"', '" +f.getNom()+"', '" +f.getPrenom()  +"', '" + f.getAdresse_email()+ "', '" + f.getTelephone()+ "', '" + f.getVille() + "', '" + f.getPays()+ "', '" +f.getRapidite() +"', '"+ "Pending" + "', '" +f.getUser_id()+ "')" ;
         try {
             ste=con.createStatement();
             ste.executeUpdate(requeteInsert);
@@ -143,9 +143,9 @@ public class FournisseurService implements IServiceFournisseur{
     }
       
       @Override
-       public void deleteFournisseur(int code)  {
+       public void deleteFournisseur(int id)  {
         try {
-            String requete = " DELETE FROM Fournisseur WHERE code='"+code+"'" ;
+            String requete = " DELETE FROM Fournisseur WHERE id='"+id+"'" ;
             pst = con.prepareStatement(requete);
             ste=con.createStatement();
             ste.executeUpdate(requete);
@@ -197,11 +197,11 @@ public class FournisseurService implements IServiceFournisseur{
         }
         return null;
     }
-          public int getfournisseurIdByName(String prenom){
+          public int getfournisseurIdByName(String nom){
               System.out.println("chnuwaaaaa");
         try {
-            PreparedStatement pt= con.prepareStatement("SELECT id FROM fournisseur WHERE prenom = ?");
-            pt.setString(1, prenom);
+            PreparedStatement pt= con.prepareStatement("SELECT id FROM fournisseur WHERE nom = ?");
+            pt.setString(1, nom);
             ResultSet rs = pt.executeQuery();
             if(rs.next())
                       return rs.getInt(1);

@@ -75,7 +75,7 @@ public class LoginController implements Initializable {
                 
                 else if(u.getRoles().toLowerCase().contains("fournisseur"))
                 {
-                    root = FXMLLoader.load(getClass().getResource("/views/FXMLHaha.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("/views/FXMLHomeFournisseur.fxml"));
                     
                 
                 }      

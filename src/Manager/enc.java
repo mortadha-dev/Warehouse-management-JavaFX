@@ -5,6 +5,7 @@
  */
 package Manager;
 
+
 import org.mindrot.jbcrypt.BCrypt;
 /**
  *

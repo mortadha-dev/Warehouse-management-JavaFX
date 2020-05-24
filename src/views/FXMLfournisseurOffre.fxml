@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="readoff" prefHeight="625.0" prefWidth="1154.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLReadOffre">
+   <children>
+      <Label layoutX="175.0" layoutY="39.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="        Liste des Offres">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="515.0" layoutY="404.0" prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="515.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#delete" prefHeight="45.0" prefWidth="237.0" ripplerFill="#322e2e" style="-fx-background-color: #ff924f; -fx-background-radius: 0px;" text="Supprimer une offre" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ajoutoffre" buttonType="RAISED" layoutX="268.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajoutoffre" prefHeight="45.0" prefWidth="220.0" ripplerFill="WHITE" style="-fx-background-color: #ff924f; -fx-background-radius: 0px;" text="Ajouter une offre" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+       <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1175.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextField fx:id="ancienprixa" layoutX="874.0" layoutY="139.0" />
+      <TextField fx:id="nouveauprixa" layoutX="874.0" layoutY="201.0" />
+      <TextField fx:id="delaia" layoutX="874.0" layoutY="258.0" />
+      <TextField fx:id="codea" layoutX="874.0" layoutY="69.0" />
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="810.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#update" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #ff924f; -fx-background-radius: 0px;" text="Modifier une offre" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="791.0" layoutY="205.0" text="Noveau Prix" textFill="WHITE" />
+      <Label layoutX="810.0" layoutY="73.0" text="code" textFill="WHITE" />
+      <Label layoutX="794.0" layoutY="143.0" text="Ancien prix" textFill="WHITE" />
+      <Label layoutX="789.0" layoutY="262.0" text="Délai Validité" textFill="WHITE" />
+      <JFXButton fx:id="afficheroffres" buttonType="RAISED" layoutX="24.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afficheroffres" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #ff924f; -fx-background-radius: 0px;" text="Afficher les offres" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Line endX="-390.0" endY="-498.0" layoutX="1174.0" layoutY="544.0" startX="-390.0" startY="-115.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="20.0" endY="2.0" layoutX="1046.0" layoutY="425.0" startX="-272.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="-390.0" endY="-510.0" layoutX="1455.0" layoutY="556.0" startX="-390.0" startY="-128.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="81.0" endY="1.9999923706054688" layoutX="982.0" layoutY="42.0" startX="-210.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
+      <TableView fx:id="tableOffre" layoutX="24.0" layoutY="143.0" onMouseClicked="#getselected" prefHeight="195.0" prefWidth="747.0">
+         <columns>
+            <TableColumn fx:id="columnCodeOffre" prefWidth="118.99998474121094" text="Code de l'offre" />
+            <TableColumn fx:id="columnNomProduit" prefWidth="135.0" text="Nom du Produit" />
+            <TableColumn fx:id="columnAncienPrix" prefWidth="124.0" text="Ancien Prix" />
+            <TableColumn fx:id="columnNouveauPrix" minWidth="0.0" prefWidth="111.0" text="Nouveau Prix" />
+            <TableColumn fx:id="columnreduction" prefWidth="146.0" text="Reduction en %" />
+            <TableColumn fx:id="columndelaivalidite" prefWidth="126.0" text="Délai Validité" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

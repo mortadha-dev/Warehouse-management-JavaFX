@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package entities;
+
+import java.time.LocalDate;
+
 /**
  *
  * @author admin
