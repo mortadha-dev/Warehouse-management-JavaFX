@@ -110,9 +110,10 @@ public class FXMLAjoutCommandeController {
         String nomfournisseur =groupe.getValue().toString() ;
         int fournisseur_id =tes.getfournisseurIdByName(groupe.getValue().toString());
         System.out.println(fournisseur_id);
-        int produit_id =tes.getProduitIdByName(pro.getValue().toString());        
+        int produit_id =tes.getProduitIdByName(pro.getValue().toString()); 
+         String nomproduit =pro.getValue().toString() ;
         System.out.println(produit_id);
-        Commande c =new Commande( libellecommande, descriptioncommande,quantitecommande, prixunitaire,prixtotal,date,etat,nomfournisseur,fournisseur_id,produit_id);
+        Commande c =new Commande( libellecommande, descriptioncommande,quantitecommande, prixunitaire,prixtotal,date,etat,nomfournisseur,nomproduit,fournisseur_id,produit_id);
         CommandeService cs = new CommandeService();   
         ALLO.setVisible(true);
         mah.setVisible(true);

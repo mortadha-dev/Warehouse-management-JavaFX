@@ -67,6 +67,8 @@ public class FXMLHahaController {
     
     @FXML
     public TableColumn<Commande, String> columnetat;
+     @FXML
+    public TableColumn<Commande, String> columnnomproduit;
     @FXML
     public TextField prixUnitairea;
     @FXML
@@ -97,7 +99,8 @@ public class FXMLHahaController {
         CommandeService f =new CommandeService();
         List<Commande> list = f.afficherlacommandeenattente();
         columnlibelle.setCellValueFactory(new PropertyValueFactory<>("libellecommande"));
-        columndescription.setCellValueFactory(new PropertyValueFactory<>("descriptioncommande"));
+        columndescription.setCellValueFactory(new PropertyValueFactory<>("descriptioncommande"));      
+        columnnomproduit.setCellValueFactory(new PropertyValueFactory<>("nomproduit"));      
         columnquantite.setCellValueFactory(new PropertyValueFactory<>("quantitecommande"));
         columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));
         columnprixunitaire.setCellValueFactory(new PropertyValueFactory<>("prixunitaire"));

@@ -22,6 +22,7 @@ public class Commande {
     String date;
     String etat ;
     String nomfournisseur ;
+    String nomproduit;
     Produit id_produit;
     Fournisseur id_fournisseur ;
     
@@ -63,7 +64,7 @@ public class Commande {
     }
       
 
-    public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, String etat,String nomfournisseur, int fournisseur_id, int produit_id) {
+    public Commande(String libellecommande, String descriptioncommande, int quantitecommande, float prixunitaire, float prixtotal, String date, String etat,String nomfournisseur,String nomproduit ,int fournisseur_id, int produit_id) {
         this.libellecommande = libellecommande;
         this.descriptioncommande = descriptioncommande;
         this.quantitecommande = quantitecommande;
@@ -74,6 +75,7 @@ public class Commande {
         this.nomfournisseur= nomfournisseur;
         this.fournisseur_id= fournisseur_id;
         this.produit_id=produit_id;
+        this.nomproduit=nomproduit;
     }
     public Commande(String libellecommande, String descriptioncommande, int quantitecommande,String date,int fournisseur_id, int produit_id) {
         this.libellecommande = libellecommande;
@@ -198,6 +200,15 @@ public class Commande {
     public void setId_fournisseur(Fournisseur id_fournisseur) {
         this.id_fournisseur = id_fournisseur;
     }
+
+    public String getNomproduit() {
+        return nomproduit;
+    }
+
+    public void setNomproduit(String nomproduit) {
+        this.nomproduit = nomproduit;
+    }
+    
     
     
     

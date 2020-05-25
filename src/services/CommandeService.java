@@ -36,7 +36,7 @@ public class CommandeService implements IService.IServiceCommande{
     public void ajouterCommande(Commande c) throws SQLException {
        
         try {
-            String requeteInsert = "INSERT INTO Commande ( `libellecommande` , `descriptioncommande`, `quantitecommande`, `prixUnitaire`, `prixTotal`, `date`, `etat`,`nomfournisseur`,`fournisseur_id`,`produit_id` ,`commentaire` ) VALUES ('"+c.getLibellecommande()+"', '"+c.getDescriptioncommande()+"' , '"+c.getQuantitecommande()+"' , '"+0+"' , '"+0+"','"+c.getDate()+"' ,'"+"en attente"+"' ,'"+c.getNomfournisseur()+"' ,'"+c.getFournisseur_id()+"' ,'"+c.getProduit_id()+"' ,'"+""+"')";
+            String requeteInsert = "INSERT INTO Commande ( `libellecommande` , `descriptioncommande`,`nomproduit`, `quantitecommande`, `prixUnitaire`, `prixTotal`, `date`, `etat`,`nomfournisseur`,`fournisseur_id`,`produit_id` ,`commentaire` ) VALUES ('"+c.getLibellecommande()+"', '"+c.getDescriptioncommande()+"' , '"+c.getNomproduit()+"' , '"+c.getQuantitecommande()+"' , '"+0+"' , '"+0+"','"+c.getDate()+"' ,'"+"en attente"+"' ,'"+c.getNomfournisseur()+"' ,'"+c.getFournisseur_id()+"' ,'"+c.getProduit_id()+"' ,'"+""+"')";
             ste = con.createStatement();
             ste.executeUpdate(requeteInsert);    
             
@@ -47,8 +47,7 @@ public class CommandeService implements IService.IServiceCommande{
     }
     
         @Override
-    public List<Commande> afficherCommande() throws SQLException {
-          
+    public List<Commande> afficherCommande() throws SQLException {         
         List<Commande> liste = new  ArrayList<>();
             try {
                  String req = "SELECT * FROM Commande";
@@ -58,13 +57,14 @@ public class CommandeService implements IService.IServiceCommande{
                  Commande c =new Commande();
                  c.setId(res.getInt(1));
                  c.setLibellecommande(res.getString(2));
-                 c.setDescriptioncommande(res.getString(3));
-                 c.setQuantitecommande(res.getInt(4));
-                 c.setDate(res.getString(5));
-                 c.setPrixunitaire(res.getInt(6));
-                 c.setPrixtotal(res.getInt(7));              
-                 c.setEtat(res.getString(8));
-                 c.setNomfournisseur(res.getString(9));
+                 c.setDescriptioncommande(res.getString(3));               
+                 c.setNomproduit(res.getString(4));
+                  c.setQuantitecommande(res.getInt(5));
+                 c.setDate(res.getString(6));
+                 c.setPrixunitaire(res.getInt(7));
+                 c.setPrixtotal(res.getInt(8));              
+                 c.setEtat(res.getString(9));
+                 c.setNomfournisseur(res.getString(10));
                  
                  liste.add(c);                           
                  }       
@@ -170,15 +170,18 @@ public class CommandeService implements IService.IServiceCommande{
                  c.setId(res.getInt(1));
                  c.setLibellecommande(res.getString(2));
                  c.setDescriptioncommande(res.getString(3));
-                 c.setQuantitecommande(res.getInt(4));
-                  c.setDate(res.getString(5));
-                 c.setPrixunitaire(res.getInt(6));
-                 c.setPrixtotal(res.getInt(7));       
-                 c.setEtat(res.getString(8));
+                  c.setNomproduit(res.getString(4));
+                 c.setQuantitecommande(res.getInt(5));
+                 c.setDate(res.getString(6));
+                 c.setPrixunitaire(res.getInt(7));
+                 c.setPrixtotal(res.getInt(8));       
+                 c.setEtat(res.getString(9));
+                
                  liste.add(c);                           
                  }       
             } catch (SQLException e) {
-               }        
+               }    
+        System.out.println(liste);
         return liste;
     }
     

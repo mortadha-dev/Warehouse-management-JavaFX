@@ -90,6 +90,9 @@ public class FXMLReadCommandeController implements Initializable {
     
      @FXML
     public TableColumn<Commande, String> columnnomfournisseur;
+     
+       @FXML
+    public TableColumn<Commande, String> columnnomproduit;
     
     @FXML
     public AnchorPane rootPane;
@@ -135,9 +138,9 @@ public class FXMLReadCommandeController implements Initializable {
         columnlibelle.setCellValueFactory(new PropertyValueFactory<>("libellecommande"));
         
         columndescription.setCellValueFactory(new PropertyValueFactory<>("descriptioncommande"));
+        columnnomproduit.setCellValueFactory(new PropertyValueFactory<>("nomproduit"));  
         
-        columnquantite.setCellValueFactory(new PropertyValueFactory<>("quantitecommande"));
-        
+        columnquantite.setCellValueFactory(new PropertyValueFactory<>("quantitecommande"));        
         columnprixunitaire.setCellValueFactory(new PropertyValueFactory<>("prixunitaire"));
         
         columnprixtotal.setCellValueFactory(new PropertyValueFactory<>("prixtotal"));      
@@ -275,49 +278,53 @@ public class FXMLReadCommandeController implements Initializable {
               
               doc.add(new Paragraph(" "));
              
-             PdfPTable table = new PdfPTable(8);
+             PdfPTable table = new PdfPTable(9);
              table.setWidthPercentage(100);
              PdfPCell cell ;   
              /////////////////////////////////////////////////////////////
-             cell= new PdfPCell(new Phrase("libelle commande",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" libelle commande ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
              
              
-              cell= new PdfPCell(new Phrase("description ",FontFactory.getFont("Comic Sans MS",12)));
+              cell= new PdfPCell(new Phrase("description",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
-             cell= new PdfPCell(new Phrase("quantite",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Nom Produit ",FontFactory.getFont("Comic Sans MS",12)));
+             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+             cell.setBackgroundColor(BaseColor.GREEN);
+             table.addCell(cell);
+             cell= new PdfPCell(new Phrase(" quantite ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
              
              
-             cell= new PdfPCell(new Phrase("Prix.U",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Prix.U ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
              
              
-             cell= new PdfPCell(new Phrase("Prix.T",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Prix.T ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
      
-             cell= new PdfPCell(new Phrase("Date",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Date ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
              
              
-             cell= new PdfPCell(new Phrase("Etat",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Etat ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
              
-             cell= new PdfPCell(new Phrase("Nom fournisseur",FontFactory.getFont("Comic Sans MS",12)));
+             cell= new PdfPCell(new Phrase(" Nom fournisseur ",FontFactory.getFont("Comic Sans MS",12)));
              cell.setHorizontalAlignment(Element.ALIGN_CENTER);
              cell.setBackgroundColor(BaseColor.GREEN);
              table.addCell(cell);
@@ -328,6 +335,9 @@ public class FXMLReadCommandeController implements Initializable {
                 cell.setHorizontalAlignment(Element.ALIGN_CENTER);
                 table.addCell(cell);          
                  cell = new PdfPCell(new Phrase(res.getString("descriptioncommande"),FontFactory.getFont("Arial",11)));
+                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                table.addCell(cell);
+                  cell = new PdfPCell(new Phrase(res.getString("nomproduit"),FontFactory.getFont("Arial",11)));
                 cell.setHorizontalAlignment(Element.ALIGN_CENTER);
                 table.addCell(cell);
                 

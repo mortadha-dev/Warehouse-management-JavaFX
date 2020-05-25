@@ -20,17 +20,6 @@
    <children>
       <Button fx:id="accepterlacommande" layoutX="709.0" layoutY="447.0" mnemonicParsing="false" onAction="#accepterlacommande" prefHeight="39.0" prefWidth="184.0" style="-fx-background-color: #ff924f;" text="accepter la commande" />
       <Button fx:id="Ajouterlesprix" layoutX="462.0" layoutY="476.0" mnemonicParsing="false" onAction="#Ajouterlesprix" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #ff924f;" text="Ajouter le prix Total" />
-      <TableView fx:id="tableUser" layoutY="157.0" onMouseClicked="#getselected" prefHeight="195.0" prefWidth="830.0">
-         <columns>
-            <TableColumn fx:id="columnlibelle" prefWidth="139.0" text="Libelle commande" />
-            <TableColumn fx:id="columndescription" prefWidth="160.0" text="Description Commande" />
-            <TableColumn fx:id="columnquantite" prefWidth="133.0" text="Quantite Commande" />
-            <TableColumn fx:id="columnprixunitaire" minWidth="0.0" prefWidth="95.0" text="prixUnitaire" />
-            <TableColumn fx:id="columnprixtotal" prefWidth="89.0" text="prixTotal" />
-            <TableColumn fx:id="columndate" prefWidth="79.0" text="date" />
-            <TableColumn fx:id="columnetat" minWidth="0.0" prefWidth="134.0" text="etat" />
-         </columns>
-      </TableView>
       <Button fx:id="showcommandes" layoutX="17.0" layoutY="382.0" mnemonicParsing="false" onAction="#showcommandes" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: #ff924f;" text="Afficher tous les commandes" />
       <TextField fx:id="prixUnitairea" layoutX="228.0" layoutY="459.0" prefHeight="35.0" prefWidth="149.0" />
       <Button fx:id="refuserlacommande" layoutX="707.0" layoutY="527.0" mnemonicParsing="false" onAction="#refuserlacommande" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: #ff924f;" text="refuser la commande" />
@@ -71,5 +60,17 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <TableView fx:id="tableUser" layoutX="10.0" layoutY="143.0" onMouseClicked="#getselected" prefHeight="195.0" prefWidth="844.0">
+         <columns>
+            <TableColumn fx:id="columnlibelle" prefWidth="109.0" text="Libelle commande" />
+            <TableColumn fx:id="columndescription" prefWidth="138.0" text="Description commande" />
+            <TableColumn fx:id="columnnomproduit" prefWidth="110.0" text="Nom produit" />
+            <TableColumn fx:id="columnquantite" minWidth="0.0" prefWidth="87.0" text="quantité" />
+            <TableColumn fx:id="columnprixunitaire" prefWidth="96.0" text="prixUnitaire" />
+            <TableColumn fx:id="columnprixtotal" prefWidth="118.0" text="prixTotal" />
+            <TableColumn fx:id="columndate" minWidth="0.0" prefWidth="84.0" text="date" />
+            <TableColumn fx:id="columnetat" prefWidth="101.0" text="etat" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>
