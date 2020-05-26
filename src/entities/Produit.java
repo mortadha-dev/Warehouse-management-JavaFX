@@ -15,13 +15,13 @@ public class Produit {
     String libelle ;
     int quantite ;
     int quantitemin ;
-    boolean supprimer ;
+    int supprimer ;
     String datesupp ;
     
     public Produit(){
         
     };
-    public Produit(int id, String description ,String libelle , int quantite, int quantitemin, boolean supprimer, String datesupp){
+    public Produit(int id, String description ,String libelle , int quantite, int quantitemin, int supprimer, String datesupp){
     this.id=id;
     this.description=description;
     this.libelle=libelle;
@@ -36,6 +36,30 @@ public class Produit {
          this.description=description;
          this.libelle=libelle;  
         
+    }
+     
+    public Produit(String description, String libelle, int quantite, int quantitemin, int supprimer, String datesupp) {
+        this.description = description;
+        this.libelle = libelle;
+        this.quantite = quantite;
+        this.quantitemin = quantitemin;
+        this.supprimer = supprimer;
+        this.datesupp = datesupp;
+    }
+
+
+    public Produit(String description, String libelle, int quantite, int quantitemin) {
+        this.description = description;
+        this.libelle = libelle;
+        this.quantite = quantite;
+        this.quantitemin = quantitemin;
+    }
+
+    public Produit(int id, String description, int quantite, int quantitemin) {
+        this.id = id;
+        this.description = description;
+        this.quantite = quantite;
+        this.quantitemin = quantitemin;
     }
     
 
@@ -79,11 +103,11 @@ public class Produit {
         this.quantitemin = quantitemin;
     }
 
-    public boolean isSupprimer() {
+    public int getSupprimer() {
         return supprimer;
     }
 
-    public void setSupprimer(boolean supprimer) {
+    public void setSupprimer(int supprimer) {
         this.supprimer = supprimer;
     }
 

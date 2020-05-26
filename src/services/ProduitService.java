@@ -121,9 +121,9 @@ public class ProduitService implements InterfaceProduit<Produit> {
         return null;
     }
 
-    public int getProduitIdBydesc(String Desc) throws SQLException {
+    public int getProduitIdBydesc(String description) throws SQLException {
         PreparedStatement pst = con.prepareStatement("SELECT id FROM produit where description=?");
-        pst.setString(1, Desc);
+        pst.setString(1, description);
         ResultSet rs = pst.executeQuery();
         while (rs.next()) {
             int p = rs.getInt(1);
