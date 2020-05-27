@@ -78,7 +78,7 @@ public class ReadNonStockController implements Initializable {
     @FXML
     private void ajouter(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/views/AjoutStockage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/Ajoutnnstock.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

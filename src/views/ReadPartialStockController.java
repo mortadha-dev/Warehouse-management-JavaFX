@@ -77,7 +77,7 @@ public class ReadPartialStockController implements Initializable {
     @FXML
     private void stocker(ActionEvent event) throws IOException {
            Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/views/AjoutStockage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/Ajoutpartialstock.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

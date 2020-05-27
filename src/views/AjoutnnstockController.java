@@ -26,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import service.EntrepotService;
 import service.ProduitService;
@@ -36,16 +37,18 @@ import service.StockageService;
  *
  * @author tayssir
  */
-public class AjoutStockageController implements Initializable {
+public class AjoutnnstockController implements Initializable {
 
     @FXML
-    private ComboBox<String> comboentre;
+    private Pane hayh;
     @FXML
-    private Button ajouter;
+    private ComboBox<String> comboentre;
     @FXML
     private ComboBox<String> comboprod;
     @FXML
     private TextField quantitep;
+    @FXML
+    private Button ajouter;
     @FXML
     private DatePicker datep;
 
@@ -54,20 +57,20 @@ public class AjoutStockageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      EntrepotService f =new EntrepotService();
+        EntrepotService f =new EntrepotService();
         List<Entrepot> list;  
         ProduitService e = new ProduitService();
         StockageService a = new StockageService();
         List<Produit> liste;
         try {
             list = f.readAll();
-          
+           liste = a.readnonstocker();
              for(int i=0; i<list.size(); i++){
                  comboentre.getItems().add(list.get(i).getNomcourtlieu());
                
             }
-         for(int i=0; i<list.size(); i++){
-                 comboprod.getItems().add(list.get(i).getDescription());
+         for(int i=0; i<liste.size(); i++){
+                 comboprod.getItems().add(liste.get(i).getDescription());
                
             }
         
@@ -78,7 +81,6 @@ public class AjoutStockageController implements Initializable {
 
     @FXML
     private void importentre(ActionEvent event) {
-      
     }
 
     @FXML

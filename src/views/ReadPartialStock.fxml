@@ -30,6 +30,6 @@
             <TableColumn fx:id="stkqua" prefWidth="124.0" text="Quantité minimum" />
         </columns>
       </TableView>
-      <Button fx:id="stocke" layoutX="277.0" layoutY="337.0" mnemonicParsing="false" onAction="#stockerr" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Stocker" textFill="#a868a0" />
+      <Button fx:id="stocke" layoutX="277.0" layoutY="337.0" mnemonicParsing="false" onAction="#stocker" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Stocker" textFill="#a868a0" />
    </children>
 </AnchorPane>
