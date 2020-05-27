@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #131022;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReadNonStockController">
+   <children>
+       <Pane fx:id="hayhay" layoutX="39.0" layoutY="-152.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+     
+      <TableView fx:id="tabnnstock" layoutX="86.0" layoutY="119.0" prefHeight="200.0" prefWidth="429.0">
+        <columns>
+          <TableColumn fx:id="stkid" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="stkdesc" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="stklib" prefWidth="75.0" text="Libelle" />
+            <TableColumn fx:id="stkq" prefWidth="75.0" text="Quantite" />
+            <TableColumn fx:id="stkqua" prefWidth="128.0" text="Quantite minimum" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajout" layoutX="272.0" layoutY="334.0" mnemonicParsing="false" onAction="#ajouter" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Stocker" textFill="#a868a0" />
+      <Label layoutX="153.0" layoutY="30.0" text="Liste des produits non encore " textFill="#140313">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="168.0" layoutY="65.0" text="stocker dans un entrepot" textFill="#140313">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

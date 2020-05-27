@@ -45,7 +45,7 @@ public class SampleController implements Initializable {
     @FXML
     private void stockage(ActionEvent event) throws IOException {
          Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/Interfaceread.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/views/ReadStockage.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
@@ -54,7 +54,7 @@ public class SampleController implements Initializable {
     @FXML
     private void Entrepot(ActionEvent event) throws IOException {
          Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/Interfaceread.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/views/Interfaceread.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
@@ -63,7 +63,7 @@ public class SampleController implements Initializable {
     @FXML
     private void produit(ActionEvent event) throws IOException {
          Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/Readproduit.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/views/Readproduit.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();

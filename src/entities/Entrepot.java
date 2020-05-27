@@ -19,6 +19,9 @@ public class Entrepot {
     private String pays;
     private int stockphysique;
 
+    
+    
+    
     public Entrepot(int id, String nomcourtlieu, String description, String adress, String codepostale, String ville, String pays, int stockphysique) {
         this.id = id;
         this.nomcourtlieu = nomcourtlieu;

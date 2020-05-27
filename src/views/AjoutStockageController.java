@@ -24,6 +24,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import service.EntrepotService;
@@ -46,7 +47,7 @@ public class AjoutStockageController implements Initializable {
     @FXML
     private TextField quantitep;
     @FXML
-    private TextField datep;
+    private DatePicker datep;
 
     /**
      * Initializes the controller class.
@@ -93,7 +94,7 @@ public class AjoutStockageController implements Initializable {
          
         Produit produit = e.getProduitBydesc(prod); 
         int quantite = Integer.parseInt(quantitep.getText());
-        String datedestockage = datep.getText();
+        String datedestockage = datep.getValue().toString();
         Stockage s = new Stockage(entrepot,produit,quantite,datedestockage);
         StockageService ss = new StockageService();
         ss.ajouter(s);

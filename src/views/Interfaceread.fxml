@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="718.0" prefWidth="963.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InterfacereadController">
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="718.0" prefWidth="963.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.InterfacereadController">
    <children>
-      <Pane fx:id="hayhay" layoutX="153.0" layoutY="-151.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+      <Pane fx:id="hayhay" layoutX="221.0" layoutY="-145.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
       <TableView fx:id="tabentrepot" layoutX="72.0" layoutY="108.0" onMouseClicked="#vbox" prefHeight="200.0" prefWidth="819.0">
         <columns>
           <TableColumn fx:id="columnid" prefWidth="49.0" text="Id" />
@@ -29,8 +29,8 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="modifier" layoutX="574.0" layoutY="649.0" mnemonicParsing="false" onAction="#modifier" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Modifier entrepot" textFill="#a868a0" />
-      <Button fx:id="supp" layoutX="761.0" layoutY="649.0" mnemonicParsing="false" onAction="#supprimer" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Supprimer entrepot" textFill="#a868a0" />
+      <Button fx:id="modifier" layoutX="574.0" layoutY="649.0" mnemonicParsing="false" onAction="#modifier" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Modifier entrepot" textFill="#a868a0" />
+      <Button fx:id="supp" layoutX="761.0" layoutY="649.0" mnemonicParsing="false" onAction="#supprimer" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Supprimer entrepot" textFill="#a868a0" />
       <TextField fx:id="nomt" layoutX="254.0" layoutY="347.0" />
       <TextField fx:id="villet" layoutX="662.0" layoutY="348.0" />
       <TextField fx:id="descriptiont" layoutX="254.0" layoutY="427.0" />
@@ -66,7 +66,7 @@
          <font>
             <Font size="13.0" />
          </font></Label>
-      <Button fx:id="refresh" layoutX="362.0" layoutY="649.0" mnemonicParsing="false" onAction="#refresher" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Refresher le tableau" textFill="#a868a0" />
-      <Button fx:id="ajouter" layoutX="182.0" layoutY="649.0" mnemonicParsing="false" onAction="#ajouter" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Ajouter entrepot" textFill="#a868a0" />
+      <Button fx:id="refresh" layoutX="362.0" layoutY="649.0" mnemonicParsing="false" onAction="#refresher" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Refresher le tableau" textFill="#a868a0" />
+      <Button fx:id="ajouter" layoutX="182.0" layoutY="649.0" mnemonicParsing="false" onAction="#ajouter" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Ajouter entrepot" textFill="#a868a0" />
    </children>
 </AnchorPane>

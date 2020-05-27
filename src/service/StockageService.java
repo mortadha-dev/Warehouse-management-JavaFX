@@ -1,4 +1,4 @@
-/*
+  /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -6,6 +6,7 @@
 package service;
 
 import Iservice.InterfaceStockage;
+import entities.Produit;
 
 import entities.Stockage;
 import java.sql.Connection;
@@ -13,6 +14,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -106,13 +109,61 @@ public class StockageService implements InterfaceStockage {
                         ps.getProduitById(rs.getInt(3)).getDescription(),
                         rs.getInt(4),rs.getString(5)));
 
-                System.out.println("Abonnement : id = " + rs.getInt(1) + " | catégorie = " + es.getEntrepotById(rs.getInt(2)) + 
-                        " | notre produit \n = " + ps.getProduitById(rs.getInt(3)) +" | notre quantite = " + rs.getString(4) +" | notre decde stockage = " + rs.getString(5));
+              //  System.out.println("Abonnement : id = " + rs.getInt(1) + " | catégorie = " + es.getEntrepotById(rs.getInt(2)) + 
+                //        " | notre produit \n = " + ps.getProduitById(rs.getInt(3)) +" | notre quantite = " + rs.getString(4) +" | notre decde stockage = " + rs.getString(5));
             }
             
         } catch (SQLException ex) {
             Logger.getLogger(StockageService.class.getName()).log(Level.SEVERE, null, ex);
         }
         return stocklist;
-    }}
+    }
 
+public List<Produit> readnonstocker() throws SQLException {
+        List<Produit> arr=new ArrayList<>();
+    
+      String req =  ("SELECT * FROM produit WHERE id NOT IN (SELECT produit.id FROM produit JOIN stockage ON produit.id = stockage.id_produit GROUP BY produit.id) ");
+     ste=con.createStatement();
+    ResultSet rs = ste.executeQuery(req); 
+        
+            while (rs.next()) {          
+                 Produit p =new Produit();
+                 
+               p.setId(rs.getInt(1));
+               p.setDescription(rs.getString(2));
+               p.setLibelle(rs.getString(3));
+               p.setQuantite(rs.getInt(4));
+               p.setQuantitemin(rs.getInt(5));
+               
+               
+               
+               System.out.println("Produit : id = " + rs.getInt(1) + " | description = " + rs.getString(2) + 
+                         " | quantite = " + rs.getString(4) );
+            
+     arr.add(p); }
+        return arr;
+    }
+public List<Produit> readpartialstocker() throws SQLException {
+        List<Produit> arr=new ArrayList<>();
+    
+      String req =  ("SELECT * FROM produit WHERE produit.quantite > (SELECT SUM(stockage.quantite) FROM stockage WHERE produit.id = stockage.id_produit) ");
+     ste=con.createStatement();
+    ResultSet rs = ste.executeQuery(req); 
+        
+            while (rs.next()) {          
+                 Produit p =new Produit();
+                 
+               p.setId(rs.getInt(1));
+               p.setDescription(rs.getString(2));
+               p.setLibelle(rs.getString(3));
+               p.setQuantite(rs.getInt(4));
+               p.setQuantitemin(rs.getInt(5));
+               
+               
+               
+               System.out.println("Produit : id = " + rs.getInt(1) + " | description = " + rs.getString(2) + 
+                         " | quantite = " + rs.getString(4) );
+            
+     arr.add(p); }
+        return arr;
+    }}

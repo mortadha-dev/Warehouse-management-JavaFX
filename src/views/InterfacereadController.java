@@ -217,23 +217,16 @@ public class InterfacereadController implements Initializable {
         }
     }
     
-    
-    
-    
-    
-    
     @FXML
     private void refresher(ActionEvent event) {
        InterfacereadController ir = new InterfacereadController();
          ir.refresh();
-    
-    
 }
 
     @FXML
     private void ajouter(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/view/InterfaceAjout.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/InterfaceAjout.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

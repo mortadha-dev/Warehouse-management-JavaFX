@@ -12,6 +12,7 @@ import entities.Stockage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -26,10 +27,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import service.EntrepotService;
 
@@ -61,7 +64,7 @@ public class ReadStockageController implements Initializable {
     @FXML
     private TextField quantites;
     @FXML
-    private TextField dates;
+    private DatePicker dates;
     @FXML
     private Button ajouter;
     @FXML
@@ -72,6 +75,12 @@ public class ReadStockageController implements Initializable {
     private Button supprimer;
     @FXML
     private TableView<Stockage> tabstock;
+    @FXML
+    private Pane hayhay;
+    @FXML
+    private Button nnstocker;
+    @FXML
+    private Button partialstock;
 
     /**
      * Initializes the controller class.
@@ -96,7 +105,11 @@ public class ReadStockageController implements Initializable {
          } catch (SQLException ex) {
             Logger.getLogger(InterfacereadController.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
+        try {
+            ps.readnonstocker();
+        } catch (SQLException ex) {
+            Logger.getLogger(ReadStockageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
    
     }    
 
@@ -140,7 +153,7 @@ public class ReadStockageController implements Initializable {
         int idpr = b.getProduitIdBydesc(desc);
         
         int quantite = Integer.parseInt(quantites.getText());
-        String datedestockage = dates.getText();
+        String datedestockage = dates.getValue().toString();
         
         Stockage s = new Stockage(entrepot,produit,quantite,datedestockage);
         StockageService ss = new StockageService();
@@ -159,7 +172,7 @@ public class ReadStockageController implements Initializable {
         comboentrepot.setValue(s.getNomEntrepot());
         comboproduit.setValue(s.getNomProduit());
         quantites.setText(Integer.toString((int) s.getQuantite()));
-        dates.setText(s.getDatedestockage());
+        dates.setValue(LocalDate.parse(s.getDatedestockage()));
     }
     @FXML
     private void supprimerstock(ActionEvent event) throws SQLException {
@@ -172,6 +185,24 @@ public class ReadStockageController implements Initializable {
         alert.setTitle("Félicitations");
         alert.setHeaderText("suppression réussite");
         alert.showAndWait();
+    }
+
+    @FXML
+    private void nnstocker(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/views/ReadNonStock.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void partialstock(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/views/ReadPartialStock.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     
 }

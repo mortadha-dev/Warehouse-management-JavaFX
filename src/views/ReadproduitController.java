@@ -79,8 +79,6 @@ public class ReadproduitController implements Initializable {
     @FXML
     private Button ajouter;
     @FXML
-    private Pane hayha;
-    @FXML
     private Button exporter;
 
     /**
