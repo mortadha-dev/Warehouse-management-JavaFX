@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="746.0" style="-fx-background-color: #2A363F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+   <children>
+      <Pane layoutX="36.0" layoutY="205.0" prefHeight="83.0" prefWidth="259.0">
+         <children>
+            <Group layoutX="57.0" layoutY="32.0">
+               <children>
+                  <Circle fill="#6dd89f" layoutY="3.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#5fb68c" layoutX="19.0" layoutY="3.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#457666" layoutY="21.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#539778" layoutX="19.0" layoutY="21.158203125" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="#fbfcfc" layoutX="34.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrôpot">
+                     <font>
+                        <Font name="Century Gothic" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+         </children>
+      </Pane>
+      <Line endX="100.0" layoutX="373.0" layoutY="254.0" rotate="90.0" startX="-150.0" stroke="#465058" strokeWidth="2.0" />
+      <TextField fx:id="username" layoutX="404.0" layoutY="143.0" prefHeight="41.0" prefWidth="248.0" promptText="username" style="-fx-background-color: #2A363F; -fx-border-color: #465058;" stylesheets="@Lgoin.css" />
+      <PasswordField fx:id="password" layoutX="404.0" layoutY="213.0" prefHeight="41.0" prefWidth="248.0" promptText="Password" style="-fx-border-color: #465058; -fx-background-color: #2A363F;" stylesheets="@Lgoin.css" />
+      <JFXButton fx:id="connection" layoutX="404.0" layoutY="300.0" onAction="#connect" prefHeight="41.0" prefWidth="248.0" style="-fx-background-color: #6ED9A0;" stylesheets="@Lgoin.css" text="Se connecter" textFill="#fbfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="399.0" layoutY="380.0" onAction="#creatAccount" prefHeight="30.0" prefWidth="259.0" ripplerFill="WHITE" text="Créer un compte maintenant !!" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="messageErreur" layoutX="404.0" layoutY="425.0" prefHeight="41.0" prefWidth="349.0" textFill="#b30000">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

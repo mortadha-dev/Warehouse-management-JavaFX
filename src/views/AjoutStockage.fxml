@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AjoutStockageController">
+   <children>
+      <Label layoutX="104.0" layoutY="79.0" text="Entrepot" textFill="WHITE" />
+      <Label layoutX="107.0" layoutY="138.0" text="Produit" textFill="WHITE" />
+      <Label layoutX="103.0" layoutY="192.0" text="Quantite" textFill="WHITE" />
+      <Label layoutX="103.0" layoutY="241.0" text="Date se stockage" textFill="WHITE" />
+      <ComboBox fx:id="comboentre" layoutX="237.0" layoutY="75.0" onAction="#importentre" prefWidth="150.0" />
+      <ComboBox fx:id="comboprod" layoutX="237.0" layoutY="134.0" onAction="#importprod" prefWidth="150.0" />
+      <TextField fx:id="quantitep" layoutX="238.0" layoutY="188.0" />
+      <TextField fx:id="datep" layoutX="237.0" layoutY="237.0" />
+      <JFXButton fx:id="ajouter" buttonType="RAISED" layoutX="173.0" layoutY="461.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Ajouterstock" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Ajouter un stockage" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="746.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="mah" alignment="CENTER" layoutX="148.0" layoutY="522.0" prefHeight="48.0" prefWidth="250.0" style="-fx-background-color: #FFC66C;" text="Progressing">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="582.0" layoutY="515.0" mnemonicParsing="false" onAction="#clear" prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: #bb0b0b;" text="Vider les champs" textFill="WHITE" />
+      <ProgressIndicator fx:id="ALLO" layoutX="198.0" layoutY="344.0" prefHeight="94.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

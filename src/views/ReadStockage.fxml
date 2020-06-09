@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1154.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReadStockageController">
+   <children>
+      <TableView fx:id="tabstock" layoutX="24.0" layoutY="123.0" onMouseClicked="#fill" prefHeight="277.0" prefWidth="725.0">
+        <columns>
+          <TableColumn fx:id="columnentrepot" prefWidth="148.0" text="Nom entrepot" />
+            <TableColumn fx:id="columnproduit" prefWidth="171.0" text="Nom produit" />
+            <TableColumn fx:id="columnquantite" prefWidth="158.0" text="Quantite" />
+            <TableColumn fx:id="columndate" prefWidth="247.0" text="date de stockage" />
+        </columns>
+      </TableView>
+      <Label layoutX="800.0" layoutY="59.0" text="Nom entrepot" textFill="WHITE" />
+      <Label layoutX="800.0" layoutY="102.0" text="Nom produit" textFill="WHITE" />
+      <Label layoutX="800.0" layoutY="162.0" text="Quantite" textFill="WHITE" />
+      <Label layoutX="792.0" layoutY="219.0" text="Date de stockage" textFill="WHITE" />
+      <ComboBox fx:id="comboentrepot" layoutX="920.0" layoutY="55.0" onAction="#importentrepot" prefWidth="150.0" />
+      <ComboBox fx:id="comboproduit" layoutX="920.0" layoutY="98.0" onAction="#importproduit" prefWidth="150.0" />
+      <TextField fx:id="quantites" layoutX="921.0" layoutY="158.0" />
+      <TextField fx:id="dates" layoutX="921.0" layoutY="215.0" />
+      <JFXButton fx:id="modifier" buttonType="RAISED" layoutX="824.0" layoutY="290.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#modifierstock" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Modifier un stockage" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="supprimer" buttonType="RAISED" layoutX="535.0" layoutY="406.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#supprimerstock" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Supprimer un stockage" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="24.0" layoutY="406.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Refresherstock" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Afficher les stocks" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ajouter" buttonType="RAISED" layoutX="272.0" layoutY="406.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajouterstock" prefHeight="45.0" prefWidth="228.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter un stockage" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="193.0" layoutY="28.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="      Liste de Stockage">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <MenuBar prefHeight="27.0" prefWidth="1175.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+              
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>-->
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" onMouseClicked="#GetLine" prefHeight="625.0" prefWidth="1154.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LivreurController">
+   <children>
+      <TableView fx:id="table" layoutY="133.0" onMouseClicked="#GetLine" prefHeight="323.0" prefWidth="530.0">
+         <columns>
+            <TableColumn fx:id="Livid" prefWidth="82.0" text="Id Livreur" />
+            <TableColumn fx:id="Livname" prefWidth="133.0" text="Nom Livreur" />
+            <TableColumn fx:id="Livnum" prefWidth="140.0" text="Numéro Livreur" />
+            <TableColumn fx:id="Livadd" minWidth="0.0" prefWidth="167.0" text="Adresse Livreur" />
+         </columns>
+      </TableView>
+      <Label layoutX="165.0" layoutY="29.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="    Liste des Livreurs">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="759.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#supprimerlivreur" prefHeight="45.0" prefWidth="120.0" ripplerFill="#322e2e" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Supprimer " underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <!-- <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />-->
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="add" buttonType="RAISED" layoutX="626.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajoutlivreur" prefHeight="45.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter " underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+           <!--  <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />-->
+         </graphic>
+      </JFXButton>
+      <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1175.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextField fx:id="num" layoutX="736.0" layoutY="174.0" />
+      <TextField fx:id="adresse" layoutX="736.0" layoutY="223.0" />
+      <TextField fx:id="nom" layoutX="736.0" layoutY="121.0" />
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="893.0" layoutY="284.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#modifierlivreur" prefHeight="45.0" prefWidth="120.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Modifier" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+         <!--   <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />-->
+         </graphic>
+      </JFXButton>
+      <Label layoutX="631.0" layoutY="125.0" text="Nom livreur" textFill="WHITE" />
+      <Label layoutX="632.0" layoutY="222.0" text="Adresse Mail" textFill="WHITE" />
+      <Label layoutX="632.0" layoutY="178.0" text="Numéro télephone" textFill="WHITE" />      
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="631.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AjoutproduitController">
+   <children>
+       <Pane fx:id="hayh" layoutX="-57.0" layoutY="-193.0" prefHeight="303.0" prefWidth="467.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+      
+                        <Label layoutX="137.0" layoutY="61.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="136.0" text="Libelle" textFill="WHITE" />
+      <Label layoutX="147.0" layoutY="195.0" text="Quantite" textFill="WHITE" />
+      <Label layoutX="139.0" layoutY="272.0" text="Quantite minimum" textFill="WHITE" />
+      <TextField fx:id="descriptionp" layoutX="300.0" layoutY="58.0" />
+      <TextField fx:id="libellep" layoutX="300.0" layoutY="124.0" />
+      <TextField fx:id="quantitep" layoutX="300.0" layoutY="191.0" />
+      <TextField fx:id="quantiteminp" layoutX="300.0" layoutY="268.0" />
+      <JFXButton fx:id="Ajouter" buttonType="RAISED" layoutX="193.0" layoutY="374.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Ajout" prefHeight="57.0" prefWidth="246.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter Produit" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLUpdateFournisseurController">
+   <children>
+      <TextField fx:id="noma" layoutX="202.0" layoutY="64.0" />
+      <TextField fx:id="prenoma" layoutX="199.0" layoutY="108.0" />
+      <TextField fx:id="maila" layoutX="199.0" layoutY="160.0" />
+      <Label layoutX="96.0" layoutY="77.0" text="nom" />
+      <Label layoutX="96.0" layoutY="121.0" text="prenom" />
+      <Label fx:id="Departement" layoutX="81.0" layoutY="173.0" prefHeight="18.0" prefWidth="88.0" text="Adresse-email" />
+      <TextField fx:id="telephonea" layoutX="199.0" layoutY="212.0" />
+      <Label layoutX="89.0" layoutY="229.0" prefHeight="18.0" prefWidth="72.0" text="telephone" />
+      <AmbientLight color="CHARTREUSE" layoutX="56.0" layoutY="55.0" lightOn="true" />
+      <TextField fx:id="codea" layoutX="199.0" layoutY="26.0" />
+      <Label layoutX="99.0" layoutY="33.0" prefHeight="25.0" prefWidth="48.0" text="code" />
+      <ProgressIndicator layoutX="228.0" layoutY="435.0" prefHeight="100.0" prefWidth="100.0" />
+      <Label alignment="CENTER" layoutX="193.0" layoutY="547.0" prefHeight="43.0" prefWidth="171.0" style="-fx-background-color: #72D3FE;" text="Progressing">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="273.0" prefHeight="18.0" prefWidth="72.0" text="ville" />
+      <TextField fx:id="villea" layoutX="199.0" layoutY="260.0" />
+      <Label layoutX="96.0" layoutY="317.0" prefHeight="18.0" prefWidth="72.0" text="Pays" />
+      <TextField fx:id="paysa" layoutX="199.0" layoutY="300.0" />
+
+      <JFXButton fx:id="update" buttonType="RAISED" layoutX="141.0" layoutY="463.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#update" prefHeight="45.0" prefWidth="265.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="rapidetea" layoutX="193.0" layoutY="395.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="585.0" prefWidth="935.0" style="-fx-background-color: #393351; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReadproduitController">
+   <children>
+      
+      <TableView fx:id="tabproduit" layoutX="74.0" layoutY="118.0" onMouseClicked="#click" prefHeight="200.0" prefWidth="635.0">
+        <columns>
+          <TableColumn fx:id="columnid" prefWidth="47.0" text="Id" />
+          <TableColumn fx:id="columndesc" prefWidth="177.0" text="Description" />
+            <TableColumn fx:id="columnlibell" prefWidth="120.0" text="Libelle" />
+            <TableColumn fx:id="columnq" prefWidth="122.0" text="Quantite" />
+            <TableColumn fx:id="columnqm" prefWidth="168.0" text="Quantite minimum" />
+        </columns>
+      </TableView>
+      <TextField fx:id="descriptionp" layoutX="893.0" layoutY="106.0" />
+      <TextField fx:id="libellep" layoutX="893.0" layoutY="162.0" />
+      <TextField fx:id="quantitep" layoutX="893.0" layoutY="218.0" />
+      <TextField fx:id="qmp" layoutX="893.0" layoutY="268.0" />
+      <Label layoutX="815.0" layoutY="109.0" text="Description" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="830.0" layoutY="165.0" text="Libelle" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="823.0" layoutY="221.0" text="Quantite" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="776.0" layoutY="271.0" text="Quantite minimum" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="1178.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="189.0" layoutY="28.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="      Liste des Produits">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="exporter" buttonType="RAISED" layoutX="314.0" layoutY="451.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#export" prefHeight="45.0" prefWidth="275.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Exporter les données en excel" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="34.0" layoutY="363.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#refresher" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Afficher les Produits" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="supprimer" buttonType="RAISED" layoutX="526.0" layoutY="363.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#supp" prefHeight="45.0" prefWidth="201.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Supprimer Produit" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="modifier" buttonType="RAISED" layoutX="854.0" layoutY="341.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#modif" prefHeight="45.0" prefWidth="228.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Modifier Produit" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ajouter" buttonType="RAISED" layoutX="297.0" layoutY="373.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajout" prefHeight="45.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter Produit" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

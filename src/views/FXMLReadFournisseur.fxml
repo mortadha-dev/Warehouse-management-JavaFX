@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="readfournisseurpane" prefHeight="639.0" prefWidth="1186.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLReadFournisseurController">
+   <children>
+      <TableView fx:id="tableUser" layoutY="201.0" onMouseClicked="#hello" prefHeight="211.0" prefWidth="728.0">
+         <columns>
+            <TableColumn fx:id="columncode" prefWidth="67.0" text="Code" />
+            <TableColumn fx:id="columnnom" prefWidth="82.0" text="Nom" />
+            <TableColumn fx:id="columnprenom" prefWidth="83.0" text="Prenom" />
+            <TableColumn fx:id="columnmail" prefWidth="97.0" text="Mail" />
+            <TableColumn fx:id="columntelephone" prefWidth="85.0" text="Telephone" />
+            <TableColumn fx:id="columnville" prefWidth="71.0" text="Ville" />
+            <TableColumn fx:id="columnpays" minWidth="0.0" prefWidth="64.0" text="Pays" />
+            <TableColumn fx:id="columnrapidite" prefWidth="65.0" text="Rapidite" />
+            <TableColumn fx:id="columncompte" prefWidth="120.0" text="etat du compte" />
+         </columns>
+      </TableView>
+      <Label layoutX="165.0" layoutY="29.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #FA2C56;" text="    Liste des fournisseurs">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="505.0" layoutY="394.0" prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="457.0" layoutY="457.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#delete" prefHeight="45.0" prefWidth="227.0" ripplerFill="#322e2e" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Supprimer un fournisseur" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="cool" buttonType="RAISED" layoutX="237.0" layoutY="457.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ajouter" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Ajouter un fournisseur" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1186.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#aprop" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aprop" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="noma" layoutX="844.0" layoutY="108.0" />
+      <TextField fx:id="prenoma" layoutX="844.0" layoutY="154.0" />
+      <TextField fx:id="maila" layoutX="844.0" layoutY="197.0" />
+      <TextField fx:id="villea" layoutX="844.0" layoutY="286.0" />
+      <TextField fx:id="telephonea" layoutX="844.0" layoutY="239.0" />
+      <TextField fx:id="codea" layoutX="844.0" layoutY="67.0" />
+      <TextField fx:id="rapidetea" layoutX="844.0" layoutY="379.0" />
+      <TextField fx:id="paysa" layoutX="844.0" layoutY="328.0" />
+      <JFXButton buttonType="RAISED" layoutX="777.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#update" prefHeight="45.0" prefWidth="250.0" ripplerFill="#242323" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Modifier un fournisseur" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="790.0" layoutY="158.0" text="Prenom" textFill="WHITE" />
+      <Label layoutX="798.0" layoutY="201.0" text="Mail" textFill="WHITE" />
+      <Label layoutX="780.0" layoutY="243.0" text="Telephone" textFill="WHITE" />
+      <Label layoutX="797.0" layoutY="290.0" text="Ville" textFill="WHITE" />
+      <Label layoutX="796.0" layoutY="332.0" text="Pays" textFill="WHITE" />
+      <Label layoutX="786.0" layoutY="386.0" text="Rapidite" textFill="WHITE" />
+      <Label layoutX="796.0" layoutY="71.0" text="code" textFill="WHITE" />
+      <Label layoutX="796.0" layoutY="112.0" text="Nom" textFill="WHITE" />
+      <TextField fx:id="filterField" layoutX="105.0" layoutY="142.0" />
+      <Label layoutX="14.0" layoutY="145.0" prefHeight="17.0" prefWidth="72.0" text="Rechercher" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="afficherfournisseur" buttonType="RAISED" layoutX="5.0" layoutY="457.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afficherfournisseur" prefHeight="45.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="rafraîchir le tableau" underline="true">
+         <font>
+            <Font name="Calibri Light" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="281.0" layoutY="590.0" prefHeight="17.0" prefWidth="56.0" text="OU" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="14.0" layoutY="585.0" onAction="#desactiver" prefHeight="41.0" prefWidth="248.0" style="-fx-background-color: #6ED9A0;" stylesheets="@Lgoin.css" text="Désactiver le compte du fournisseur" textFill="#fbfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="337.0" layoutY="585.0" onAction="#activer" prefHeight="41.0" prefWidth="268.0" style="-fx-background-color: #6ED9A0;" stylesheets="@Lgoin.css" text="Activer le compte du fournisseur" textFill="#fbfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Line endX="-390.0" endY="-510.0" layoutX="1455.0" layoutY="556.0" startX="-390.0" startY="-128.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="-390.0" endY="-510.0" layoutX="1136.0" layoutY="558.0" startX="-390.0" startY="-128.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="20.0" endY="2.0" layoutX="1046.0" layoutY="425.0" startX="-299.0" startY="2.0" stroke="#465058" strokeWidth="2.0" />
+      <Line endX="36.0" layoutX="1028.0" layoutY="45.0" startX="-281.0" startY="2.0000076293945312" stroke="#465058" strokeWidth="2.0" />
+   
+     
+      
+      
+   </children>
+</AnchorPane>

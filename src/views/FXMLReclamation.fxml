@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="readfournisseurpane" prefHeight="639.0" prefWidth="1186.0" style="-fx-background-color: #393351;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FXMLReclamationController">
+   <children>
+      <TableView fx:id="tableReclamation" layoutX="75.0" layoutY="195.0" onMouseClicked="#hello" prefHeight="286.0" prefWidth="889.0">
+         <columns>
+            <TableColumn fx:id="user" prefWidth="139.0" text="User" />
+            <TableColumn fx:id="dateee" prefWidth="165.0" text="Date Reclamation" />
+            <TableColumn fx:id="etat" prefWidth="117.0" text="Etat" />
+            <TableColumn fx:id="type" prefWidth="188.0" text="Type" />
+            <TableColumn fx:id="description" prefWidth="279.0" text="Description" />
+         </columns>
+      </TableView>
+      <Label layoutX="391.0" layoutY="60.0" prefHeight="63.0" prefWidth="405.0" text="    Liste des Reclamations" textFill="#fcfcfc">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="505.0" layoutY="394.0" prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="traiter" buttonType="RAISED" layoutX="737.0" layoutY="489.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#traiter" prefHeight="45.0" prefWidth="227.0" ripplerFill="WHITE" style="-fx-background-color: #77b5fe; -fx-background-radius: 0px;" text="Traiter une Reclamation" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Calibri Light" size="19.0" />
+         </font>
+      </JFXButton>
+      <MenuBar layoutX="-5.0" layoutY="-1.0" prefHeight="27.0" prefWidth="1186.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#aprop" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aprop" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="recherche" layoutX="75.0" layoutY="164.0" onKeyPressed="#Rch" promptText="Rechercher .." />
+      <CheckBox fx:id="triers" layoutX="75.0" layoutY="489.0" mnemonicParsing="false" onAction="#trier" text="Trier" textFill="WHITE" />
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="471.0" layoutY="489.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#delete" prefHeight="45.0" prefWidth="248.0" ripplerFill="WHITE" style="-fx-background-color: red; -fx-background-radius: 0px;" text="Supprimer une Reclamation" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Calibri Light" size="19.0" />
+         </font>
+      </JFXButton>
+   
+     
+      
+      
+   </children>
+</AnchorPane>
